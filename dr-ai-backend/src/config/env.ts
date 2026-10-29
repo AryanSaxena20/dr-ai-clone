@@ -16,6 +16,7 @@ export interface AppConfig {
   MONGODB_URI: string;
   JWT_SECRET: string;
   OPENAI_API_KEY?: string;
+  OPENAI_MODEL: string;
   CORS_ORIGIN: string;
   DEMO_MODE: boolean;
 }
@@ -29,6 +30,7 @@ export function validateConfig(): AppConfig {
   const JWT_SECRET = process.env.JWT_SECRET || (NODE_ENV === 'test' ? 'test-environment-jwt-secret-key-at-least-32-chars!' : '');
   const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/dr-ai';
   const OPENAI_API_KEY = process.env.OPENAI_API_KEY || undefined;
+  const OPENAI_MODEL = process.env.OPENAI_MODEL || 'gpt-4o';
   const CORS_ORIGIN = process.env.CORS_ORIGIN || '*';
   const DEMO_MODE = process.env.DEMO_MODE === 'true' || process.env.DEMO_MODE === undefined;
 
@@ -56,6 +58,7 @@ export function validateConfig(): AppConfig {
     MONGODB_URI,
     JWT_SECRET: effectiveJwtSecret,
     OPENAI_API_KEY,
+    OPENAI_MODEL,
     CORS_ORIGIN,
     DEMO_MODE,
   };
