@@ -13,7 +13,6 @@
     "keywords": [
         "ai",
         "healthcare",
-        "chatbot",
         "medical"
     ],
     "author": "",
@@ -33,7 +32,8 @@
         "openai": "^4.28.0",
         "ts-node": "^10.9.2",
         "ts-node-dev": "^2.0.0",
-        "typescript": "^5.3.3"
+        "typescript": "^5.3.3",
+        "zod": "^3.23.8"
     },
     "devDependencies": {
         "@types/jest": "^30.0.0",
@@ -42,7 +42,7 @@
         "helmet": "^8.3.0",
         "jest": "^30.5.1",
         "mongodb-memory-server": "^11.2.0",
-        "supertest": "^7.2.2",
+        "supertest": "^2.0.0",
         "ts-jest": "^29.4.12"
     }
 }
